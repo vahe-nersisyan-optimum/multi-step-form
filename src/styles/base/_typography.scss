@@ -1,0 +1,13 @@
+@use "../abstracts" as *;
+
+body {
+  font-family: var(--font-ubuntu), system-ui, sans-serif;
+  font-size: rem(16px);
+  line-height: 1.5;
+  color: var(--color-blue-950);
+  background-color: var(--color-blue-100);
+}
+
+:focus-visible {
+  @include focus-ring;
+}

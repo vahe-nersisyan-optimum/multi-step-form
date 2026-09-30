@@ -1,0 +1,76 @@
+@use "../../../styles/abstracts" as *;
+
+.fieldset {
+  margin-bottom: rem(24px);
+
+  @include mq(md) {
+    margin-bottom: rem(32px);
+  }
+}
+
+.legend {
+  @include visually-hidden;
+}
+
+.plans {
+  display: grid;
+  gap: rem(12px);
+
+  @include mq(md) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(18px);
+  }
+}
+
+.plan {
+  @include selectable-card;
+
+  display: flex;
+  align-items: flex-start;
+  gap: rem(14px);
+  padding: rem(14px) rem(16px);
+
+  @include mq(md) {
+    flex-direction: column;
+    gap: rem(40px);
+    padding: rem(20px) rem(16px) rem(16px);
+  }
+
+  .invalid & {
+    border-color: var(--color-red-500);
+  }
+}
+
+.radio {
+  @include visually-hidden;
+}
+
+.icon {
+  flex-shrink: 0;
+}
+
+.details {
+  display: grid;
+  gap: rem(4px);
+}
+
+.name {
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.price {
+  font-size: rem(14px);
+  color: var(--color-grey-600);
+}
+
+.promo {
+  font-size: rem(12px);
+}
+
+.error {
+  margin-top: rem(12px);
+  font-size: rem(14px);
+  font-weight: 700;
+  color: var(--color-red-500);
+}

@@ -1,0 +1,52 @@
+@use "../../../styles/abstracts" as *;
+
+.thankYou {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-block: rem(46px);
+  text-align: center;
+
+  @include mq(md) {
+    padding-block: rem(64px);
+  }
+}
+
+.icon {
+  width: rem(56px);
+  height: auto;
+  margin-bottom: rem(24px);
+
+  @include mq(md) {
+    width: rem(80px);
+    margin-bottom: rem(32px);
+  }
+}
+
+.title {
+  margin-bottom: rem(9px);
+  font-size: rem(24px);
+  font-weight: 700;
+
+  @include mq(md) {
+    margin-bottom: rem(14px);
+    font-size: rem(32px);
+  }
+}
+
+.text {
+  line-height: 1.56;
+  color: var(--color-grey-600);
+}
+
+.link {
+  color: inherit;
+  text-underline-offset: 2px;
+  transition: color $transition-fast;
+
+  @include hover {
+    color: var(--color-purple-600);
+  }
+}

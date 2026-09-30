@@ -1,0 +1,10 @@
+@use "../../../styles/abstracts" as *;
+
+.fields {
+  display: grid;
+  gap: rem(16px);
+
+  @include mq(md) {
+    gap: rem(24px);
+  }
+}

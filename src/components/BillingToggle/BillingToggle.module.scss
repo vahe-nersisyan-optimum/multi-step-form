@@ -1,0 +1,56 @@
+@use "../../styles/abstracts" as *;
+
+$track-width: 38px;
+$track-height: 20px;
+$thumb-size: 12px;
+$thumb-offset: 4px;
+
+.toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: rem(24px);
+  padding: rem(14px);
+  border-radius: $radius-md;
+  background-color: var(--color-blue-50);
+}
+
+.option {
+  font-size: rem(14px);
+  font-weight: 500;
+  color: var(--color-grey-600);
+  transition: color $transition-fast;
+}
+
+.active {
+  color: var(--color-blue-950);
+}
+
+.switch {
+  position: relative;
+  width: rem($track-width);
+  height: rem($track-height);
+  border-radius: $track-height;
+  background-color: var(--color-blue-950);
+  transition: background-color $transition-fast;
+
+  @include hover {
+    background-color: var(--color-blue-800);
+  }
+}
+
+.thumb {
+  position: absolute;
+  top: 50%;
+  left: rem($thumb-offset);
+  width: rem($thumb-size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  transform: translateY(-50%);
+  transition: transform $transition-base;
+
+  [aria-checked="true"] > & {
+    transform: translate(rem($track-width - $thumb-size - 2 * $thumb-offset), -50%);
+  }
+}

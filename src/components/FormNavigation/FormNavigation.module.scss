@@ -1,0 +1,63 @@
+@use "../../styles/abstracts" as *;
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding: rem(16px);
+  background-color: var(--color-white);
+
+  @include mq(md) {
+    padding: 0;
+  }
+}
+
+.back {
+  font-size: rem(14px);
+  font-weight: 500;
+  color: var(--color-grey-600);
+  transition: color $transition-fast;
+
+  @include hover {
+    color: var(--color-blue-950);
+  }
+
+  @include mq(md) {
+    font-size: rem(16px);
+  }
+}
+
+.next {
+  margin-left: auto;
+  padding: rem(12px) rem(16px);
+  border-radius: $radius-sm;
+  background-color: var(--color-blue-950);
+  font-size: rem(14px);
+  font-weight: 500;
+  color: var(--color-white);
+  transition: background-color $transition-fast;
+
+  @include hover {
+    background-color: var(--color-blue-800);
+  }
+
+  @include mq(md) {
+    padding: rem(14px) rem(24px);
+    border-radius: $radius-md;
+    font-size: rem(16px);
+  }
+}
+
+.confirm {
+  padding-inline: rem(22px);
+  background-color: var(--color-purple-600);
+
+  @include hover {
+    background-color: var(--color-purple-400);
+  }
+
+  @include mq(md) {
+    padding-inline: rem(32px);
+  }
+}

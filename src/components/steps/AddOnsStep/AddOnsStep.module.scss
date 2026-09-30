@@ -1,0 +1,86 @@
+@use "../../../styles/abstracts" as *;
+
+.legend {
+  @include visually-hidden;
+}
+
+.list {
+  display: grid;
+  gap: rem(12px);
+
+  @include mq(md) {
+    gap: rem(16px);
+  }
+}
+
+.addOn {
+  @include selectable-card;
+
+  display: flex;
+  align-items: center;
+  gap: rem(16px);
+  padding: rem(12px) rem(16px);
+
+  @include mq(md) {
+    gap: rem(24px);
+    padding: rem(20px) rem(24px);
+  }
+}
+
+.checkbox {
+  flex-shrink: 0;
+  appearance: none;
+  width: rem(20px);
+  aspect-ratio: 1;
+  border: 1px solid var(--color-purple-200);
+  border-radius: $radius-sm;
+  background: var(--color-white) url("/images/icon-checkmark.svg") center / 0 no-repeat;
+  cursor: pointer;
+  transition:
+    background-color $transition-fast,
+    background-size $transition-fast,
+    border-color $transition-fast;
+
+  &:checked {
+    border-color: var(--color-purple-600);
+    background-color: var(--color-purple-600);
+    background-size: rem(12px);
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.details {
+  display: grid;
+  flex: 1;
+  min-width: 0;
+}
+
+.name {
+  font-size: rem(14px);
+  font-weight: 500;
+
+  @include mq(md) {
+    font-size: rem(16px);
+  }
+}
+
+.description {
+  font-size: rem(12px);
+  color: var(--color-grey-600);
+
+  @include mq(md) {
+    font-size: rem(14px);
+  }
+}
+
+.price {
+  font-size: rem(12px);
+  color: var(--color-purple-600);
+
+  @include mq(md) {
+    font-size: rem(14px);
+  }
+}

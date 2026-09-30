@@ -1,0 +1,58 @@
+@use "../../styles/abstracts" as *;
+
+$mobile-card-overlap: 73px;
+$mobile-card-max-width: 540px;
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: clamp(rem(220px), 30%, rem(274px)) 1fr;
+    width: min(100%, $card-max-width);
+    min-height: rem(600px);
+    padding: rem(16px);
+    border-radius: $radius-xl;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-card);
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: rem(24px);
+
+  @include mq(md) {
+    width: 100%;
+    max-width: calc($content-max-width + 2 * rem(32px));
+    margin-inline: auto;
+    padding: rem(40px) rem(32px) rem(16px);
+  }
+
+  @include mq(lg) {
+    max-width: calc($content-max-width + 2 * rem(16px));
+    padding-inline: rem(16px);
+  }
+}
+
+.content {
+  width: min(100% - rem(32px), $mobile-card-max-width);
+  margin: rem(-$mobile-card-overlap) auto 0;
+  padding: rem(32px) rem(24px);
+  border-radius: $radius-lg;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-card);
+
+  @include mq(md) {
+    flex: 1;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}

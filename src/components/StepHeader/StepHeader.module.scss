@@ -1,0 +1,27 @@
+@use "../../styles/abstracts" as *;
+
+.header {
+  display: grid;
+  gap: rem(9px);
+  margin-bottom: rem(22px);
+
+  @include mq(md) {
+    gap: rem(11px);
+    margin-bottom: rem(40px);
+  }
+}
+
+.title {
+  font-size: rem(24px);
+  font-weight: 700;
+  line-height: 1.15;
+
+  @include mq(md) {
+    font-size: rem(32px);
+  }
+}
+
+.description {
+  line-height: 1.56;
+  color: var(--color-grey-600);
+}
