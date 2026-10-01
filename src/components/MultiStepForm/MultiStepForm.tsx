@@ -30,9 +30,13 @@ export function MultiStepForm() {
     state,
     submitStep,
     updatePersonalInfo,
+    updateAvatar,
     selectPlan,
     toggleBilling,
     toggleAddOn,
+    applyPromoCode,
+    removePromoCode,
+    updateStartDate,
     previousStep,
     goToStep,
   } = useSubscriptionForm();
@@ -55,8 +59,10 @@ export function MultiStepForm() {
         return (
           <PersonalInfoStep
             values={state.personalInfo}
+            avatar={state.avatar}
             errors={errors}
             onChange={updatePersonalInfo}
+            onAvatarChange={updateAvatar}
           />
         );
       case 1:
@@ -83,7 +89,13 @@ export function MultiStepForm() {
             planId={state.plan}
             billing={state.billing}
             addOnIds={state.addOns}
+            promoCode={state.promoCode}
+            startDate={state.startDate}
+            errors={errors}
             onChangePlan={() => goToStep(PLAN_STEP)}
+            onApplyPromoCode={applyPromoCode}
+            onRemovePromoCode={removePromoCode}
+            onStartDateChange={updateStartDate}
           />
         );
     }

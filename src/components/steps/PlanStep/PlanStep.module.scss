@@ -37,7 +37,7 @@
   }
 
   .invalid & {
-    border-color: var(--color-red-500);
+    border-color: var(--color-error);
   }
 }
 
@@ -61,7 +61,7 @@
 
 .price {
   font-size: rem(14px);
-  color: var(--color-grey-600);
+  color: var(--color-text-muted);
 }
 
 .promo {
@@ -72,5 +72,5 @@
   margin-top: rem(12px);
   font-size: rem(14px);
   font-weight: 700;
-  color: var(--color-red-500);
+  color: var(--color-error);
 }

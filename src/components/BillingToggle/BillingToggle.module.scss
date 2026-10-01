@@ -12,18 +12,18 @@ $thumb-offset: 4px;
   gap: rem(24px);
   padding: rem(14px);
   border-radius: $radius-md;
-  background-color: var(--color-blue-50);
+  background-color: var(--color-surface-muted);
 }
 
 .option {
   font-size: rem(14px);
   font-weight: 500;
-  color: var(--color-grey-600);
+  color: var(--color-text-muted);
   transition: color $transition-fast;
 }
 
 .active {
-  color: var(--color-blue-950);
+  color: var(--color-text);
 }
 
 .switch {
@@ -31,26 +31,26 @@ $thumb-offset: 4px;
   width: rem($track-width);
   height: rem($track-height);
   border-radius: $track-height;
-  background-color: var(--color-blue-950);
+  background-color: var(--color-button);
   transition: background-color $transition-fast;
 
   @include hover {
-    background-color: var(--color-blue-800);
+    background-color: var(--color-button-hover);
   }
 }
 
 .thumb {
   position: absolute;
   top: 50%;
-  left: rem($thumb-offset);
+  inset-inline-start: rem($thumb-offset);
   width: rem($thumb-size);
   aspect-ratio: 1;
   border-radius: 50%;
-  background-color: var(--color-white);
+  background-color: var(--color-button-text);
   transform: translateY(-50%);
-  transition: transform $transition-base;
+  transition: inset-inline-start $transition-base;
 
   [aria-checked="true"] > & {
-    transform: translate(rem($track-width - $thumb-size - 2 * $thumb-offset), -50%);
+    inset-inline-start: rem($track-width - $thumb-size - $thumb-offset);
   }
 }

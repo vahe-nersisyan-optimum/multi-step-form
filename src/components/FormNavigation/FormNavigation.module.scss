@@ -6,7 +6,7 @@
   align-items: center;
   margin-top: auto;
   padding: rem(16px);
-  background-color: var(--color-white);
+  background-color: var(--color-surface);
 
   @include mq(md) {
     padding: 0;
@@ -16,11 +16,11 @@
 .back {
   font-size: rem(14px);
   font-weight: 500;
-  color: var(--color-grey-600);
+  color: var(--color-text-muted);
   transition: color $transition-fast;
 
   @include hover {
-    color: var(--color-blue-950);
+    color: var(--color-text);
   }
 
   @include mq(md) {
@@ -29,17 +29,17 @@
 }
 
 .next {
-  margin-left: auto;
+  margin-inline-start: auto;
   padding: rem(12px) rem(16px);
   border-radius: $radius-sm;
-  background-color: var(--color-blue-950);
+  background-color: var(--color-button);
   font-size: rem(14px);
   font-weight: 500;
-  color: var(--color-white);
+  color: var(--color-button-text);
   transition: background-color $transition-fast;
 
   @include hover {
-    background-color: var(--color-blue-800);
+    background-color: var(--color-button-hover);
   }
 
   @include mq(md) {
@@ -51,10 +51,11 @@
 
 .confirm {
   padding-inline: rem(22px);
-  background-color: var(--color-purple-600);
+  background-color: var(--color-accent);
+  color: var(--color-white);
 
   @include hover {
-    background-color: var(--color-purple-400);
+    background-color: var(--color-accent-hover);
   }
 
   @include mq(md) {

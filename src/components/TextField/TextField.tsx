@@ -6,7 +6,7 @@ interface TextFieldProps extends Omit<InputHTMLAttributes<HTMLInputElement>, "id
   id: string;
   label: string;
   error?: string;
-  type?: "text" | "email" | "tel";
+  type?: "text" | "email" | "tel" | "date";
 }
 
 export function TextField({ id, label, error, type, className, ...inputProps }: TextFieldProps) {

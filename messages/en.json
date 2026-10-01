@@ -1,0 +1,117 @@
+{
+  "Metadata": {
+    "title": "Multi-step form",
+    "description": "Choose a gaming subscription plan and add-ons in a few simple steps."
+  },
+  "Toolbar": {
+    "language": "Language",
+    "toggleTheme": "Toggle dark mode"
+  },
+  "Steps": {
+    "progress": "Form progress",
+    "step": "Step {number}",
+    "info": "Your info",
+    "plan": "Select plan",
+    "addOns": "Add-ons",
+    "summary": "Summary"
+  },
+  "PersonalInfo": {
+    "title": "Personal info",
+    "description": "Please provide your name, email address, and phone number.",
+    "name": "Name",
+    "namePlaceholder": "e.g. Stephen King",
+    "email": "Email Address",
+    "emailPlaceholder": "e.g. stephenking@lorem.com",
+    "phone": "Phone Number",
+    "phonePlaceholder": "e.g. +1 234 567 890"
+  },
+  "Avatar": {
+    "label": "Profile picture",
+    "optional": "Optional",
+    "prompt": "Drag & drop an image here, or click to browse",
+    "hint": "PNG, JPG or WebP, up to {size} MB",
+    "remove": "Remove picture",
+    "preview": "Your profile picture"
+  },
+  "Plan": {
+    "title": "Select your plan",
+    "description": "You have the option of monthly or yearly billing.",
+    "legend": "Plan",
+    "freeMonths": "{count} months free",
+    "names": {
+      "arcade": "Arcade",
+      "advanced": "Advanced",
+      "pro": "Pro"
+    }
+  },
+  "Billing": {
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "yearlyBilling": "Yearly billing"
+  },
+  "AddOns": {
+    "title": "Pick add-ons",
+    "description": "Add-ons help enhance your gaming experience.",
+    "legend": "Add-ons",
+    "items": {
+      "online-service": {
+        "name": "Online service",
+        "description": "Access to multiplayer games"
+      },
+      "larger-storage": {
+        "name": "Larger storage",
+        "description": "Extra 1TB of cloud save"
+      },
+      "customizable-profile": {
+        "name": "Customizable profile",
+        "description": "Custom theme on your profile"
+      }
+    }
+  },
+  "Price": {
+    "monthly": "{price}/mo",
+    "yearly": "{price}/yr"
+  },
+  "Summary": {
+    "title": "Finishing up",
+    "description": "Double-check everything looks OK before confirming.",
+    "planWithBilling": "{plan} ({billing})",
+    "change": "Change",
+    "changePlan": "Change plan",
+    "discount": "Promo code {code}",
+    "total": {
+      "monthly": "Total (per month)",
+      "yearly": "Total (per year)"
+    }
+  },
+  "Promo": {
+    "label": "Promo code",
+    "placeholder": "e.g. SAVE10",
+    "apply": "Apply",
+    "remove": "Remove",
+    "applied": "{code} applied — {percent} off"
+  },
+  "StartDate": {
+    "label": "Subscription start date"
+  },
+  "Navigation": {
+    "back": "Go Back",
+    "next": "Next Step",
+    "confirm": "Confirm"
+  },
+  "ThankYou": {
+    "title": "Thank you!",
+    "text": "Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at <link>support@loremgaming.com</link>."
+  },
+  "Errors": {
+    "required": "This field is required",
+    "nameTooShort": "Name is too short",
+    "invalidEmail": "Enter a valid email address",
+    "invalidPhone": "Enter a valid phone number",
+    "planRequired": "Please select a plan",
+    "invalidFileType": "Use a PNG, JPG or WebP image",
+    "fileTooLarge": "Image must be {size} MB or smaller",
+    "dateInPast": "Start date can't be in the past",
+    "invalidPromo": "This promo code isn't valid"
+  }
+}

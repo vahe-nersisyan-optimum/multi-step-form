@@ -1,0 +1,15 @@
+@use "../../styles/abstracts" as *;
+
+.toolbar {
+  position: absolute;
+  top: rem(12px);
+  inset-inline-end: rem(16px);
+  z-index: 1;
+  display: flex;
+  gap: rem(8px);
+
+  @include mq(md) {
+    position: static;
+    justify-content: flex-end;
+  }
+}

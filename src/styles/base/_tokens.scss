@@ -1,3 +1,41 @@
+@mixin light-theme {
+  color-scheme: light;
+
+  --color-page: var(--color-blue-100);
+  --color-surface: var(--color-white);
+  --color-surface-muted: var(--color-blue-50);
+  --color-text: var(--color-blue-950);
+  --color-text-muted: var(--color-grey-600);
+  --color-border: var(--color-purple-200);
+  --color-accent: var(--color-purple-600);
+  --color-accent-hover: var(--color-purple-400);
+  --color-button: var(--color-blue-950);
+  --color-button-hover: var(--color-blue-800);
+  --color-button-text: var(--color-white);
+  --color-error: var(--color-red-500);
+
+  --shadow-card: 0 25px 40px -20px hsl(0 0% 0% / 0.095);
+}
+
+@mixin dark-theme {
+  color-scheme: dark;
+
+  --color-page: hsl(226 32% 8%);
+  --color-surface: hsl(226 26% 13%);
+  --color-surface-muted: hsl(226 24% 17%);
+  --color-text: hsl(220 40% 95%);
+  --color-text-muted: hsl(226 14% 70%);
+  --color-border: hsl(226 16% 30%);
+  --color-accent: hsl(243 100% 74%);
+  --color-accent-hover: hsl(243 100% 82%);
+  --color-button: var(--color-blue-300);
+  --color-button-hover: var(--color-blue-200);
+  --color-button-text: var(--color-blue-950);
+  --color-error: hsl(354 90% 68%);
+
+  --shadow-card: 0 25px 40px -20px hsl(0 0% 0% / 0.6);
+}
+
 :root {
   --color-blue-950: hsl(213 96% 18%);
   --color-blue-800: hsl(213 70% 32%);
@@ -13,5 +51,9 @@
   --color-blue-50: hsl(231 100% 99%);
   --color-white: hsl(0 100% 100%);
 
-  --shadow-card: 0 25px 40px -20px hsl(0 0% 0% / 0.095);
+  @include light-theme;
+}
+
+[data-theme="dark"] {
+  @include dark-theme;
 }

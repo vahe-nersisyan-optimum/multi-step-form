@@ -38,7 +38,7 @@
 
 .text {
   line-height: 1.56;
-  color: var(--color-grey-600);
+  color: var(--color-text-muted);
 }
 
 .link {
@@ -47,6 +47,6 @@
   transition: color $transition-fast;
 
   @include hover {
-    color: var(--color-purple-600);
+    color: var(--color-accent);
   }
 }

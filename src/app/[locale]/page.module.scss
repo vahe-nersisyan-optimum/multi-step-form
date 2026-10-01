@@ -1,0 +1,14 @@
+@use "../../styles/abstracts" as *;
+
+.main {
+  position: relative;
+
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: min(100%, $card-max-width);
+    place-content: center;
+    gap: rem(16px);
+    min-height: 100dvh;
+    padding: rem(24px);
+  }
+}

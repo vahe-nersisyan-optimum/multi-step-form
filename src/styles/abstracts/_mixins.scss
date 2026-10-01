@@ -24,7 +24,7 @@
 }
 
 @mixin focus-ring($offset: 2px) {
-  outline: 2px solid var(--color-purple-600);
+  outline: 2px solid var(--color-accent);
   outline-offset: $offset;
 }
 
@@ -37,16 +37,16 @@
 }
 
 @mixin selectable-card {
-  border: 1px solid var(--color-purple-200);
+  border: 1px solid var(--color-border);
   border-radius: $radius-md;
-  background-color: var(--color-white);
+  background-color: var(--color-surface);
   cursor: pointer;
   transition:
     border-color $transition-fast,
     background-color $transition-fast;
 
   @include hover {
-    border-color: var(--color-purple-600);
+    border-color: var(--color-accent);
   }
 
   &:has(:focus-visible) {
@@ -54,7 +54,7 @@
   }
 
   &:has(:checked) {
-    border-color: var(--color-purple-600);
-    background-color: var(--color-blue-50);
+    border-color: var(--color-accent);
+    background-color: var(--color-surface-muted);
   }
 }

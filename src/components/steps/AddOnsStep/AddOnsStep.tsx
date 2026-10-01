@@ -1,6 +1,8 @@
+import { useTranslations } from "next-intl";
 import { StepHeader } from "@/components/StepHeader/StepHeader";
+import { usePriceFormatter } from "@/hooks/usePriceFormatter";
 import { ADD_ONS } from "@/lib/constants";
-import { formatPrice, getPrice } from "@/lib/pricing";
+import { getPrice } from "@/lib/pricing";
 import type { AddOnId, Billing } from "@/lib/types";
 import styles from "./AddOnsStep.module.scss";
 
@@ -11,14 +13,14 @@ interface AddOnsStepProps {
 }
 
 export function AddOnsStep({ selected, billing, onToggle }: AddOnsStepProps) {
+  const t = useTranslations("AddOns");
+  const formatPrice = usePriceFormatter();
+
   return (
     <>
-      <StepHeader
-        title="Pick add-ons"
-        description="Add-ons help enhance your gaming experience."
-      />
+      <StepHeader title={t("title")} description={t("description")} />
       <fieldset>
-        <legend className={styles.legend}>Add-ons</legend>
+        <legend className={styles.legend}>{t("legend")}</legend>
         <div className={styles.list}>
           {ADD_ONS.map((addOn) => (
             <label key={addOn.id} className={styles.addOn}>
@@ -31,8 +33,8 @@ export function AddOnsStep({ selected, billing, onToggle }: AddOnsStepProps) {
                 onChange={() => onToggle(addOn.id)}
               />
               <span className={styles.details}>
-                <span className={styles.name}>{addOn.name}</span>
-                <span className={styles.description}>{addOn.description}</span>
+                <span className={styles.name}>{t(`items.${addOn.id}.name`)}</span>
+                <span className={styles.description}>{t(`items.${addOn.id}.description`)}</span>
               </span>
               <span className={styles.price}>
                 {formatPrice(getPrice(addOn.monthlyPrice, billing), billing, { signed: true })}

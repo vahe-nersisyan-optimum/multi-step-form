@@ -1,7 +1,10 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import styles from "./ThankYou.module.scss";
 
 export function ThankYou() {
+  const t = useTranslations("ThankYou");
+
   return (
     <section className={styles.thankYou} aria-live="polite">
       <Image
@@ -11,16 +14,15 @@ export function ThankYou() {
         height={80}
         className={styles.icon}
       />
-      <h1 className={styles.title}>
-        Thank you!
-      </h1>
+      <h1 className={styles.title}>{t("title")}</h1>
       <p className={styles.text}>
-        Thanks for confirming your subscription! We hope you have fun using our platform. If you
-        ever need support, please feel free to email us at{" "}
-        <a href="mailto:support@loremgaming.com" className={styles.link}>
-          support@loremgaming.com
-        </a>
-        .
+        {t.rich("text", {
+          link: (chunks) => (
+            <a href="mailto:support@loremgaming.com" className={styles.link} dir="ltr">
+              {chunks}
+            </a>
+          ),
+        })}
       </p>
     </section>
   );

@@ -1,0 +1,117 @@
+{
+  "Metadata": {
+    "title": "نموذج متعدد الخطوات",
+    "description": "اختر خطة اشتراك الألعاب والإضافات في بضع خطوات بسيطة."
+  },
+  "Toolbar": {
+    "language": "اللغة",
+    "toggleTheme": "تبديل الوضع الداكن"
+  },
+  "Steps": {
+    "progress": "تقدّم النموذج",
+    "step": "الخطوة {number}",
+    "info": "معلوماتك",
+    "plan": "اختيار الخطة",
+    "addOns": "الإضافات",
+    "summary": "الملخّص"
+  },
+  "PersonalInfo": {
+    "title": "المعلومات الشخصية",
+    "description": "يرجى إدخال اسمك وبريدك الإلكتروني ورقم هاتفك.",
+    "name": "الاسم",
+    "namePlaceholder": "مثال: ستيفن كينغ",
+    "email": "البريد الإلكتروني",
+    "emailPlaceholder": "مثال: stephenking@lorem.com",
+    "phone": "رقم الهاتف",
+    "phonePlaceholder": "مثال: +1 234 567 890"
+  },
+  "Avatar": {
+    "label": "صورة الملف الشخصي",
+    "optional": "اختياري",
+    "prompt": "اسحب صورة وأفلتها هنا، أو انقر للاختيار",
+    "hint": "PNG أو JPG أو WebP، حتى {size} ميغابايت",
+    "remove": "إزالة الصورة",
+    "preview": "صورة ملفك الشخصي"
+  },
+  "Plan": {
+    "title": "اختر خطتك",
+    "description": "يمكنك اختيار الدفع الشهري أو السنوي.",
+    "legend": "الخطة",
+    "freeMonths": "{count} أشهر مجانًا",
+    "names": {
+      "arcade": "أركيد",
+      "advanced": "متقدّمة",
+      "pro": "احترافية"
+    }
+  },
+  "Billing": {
+    "monthly": "شهري",
+    "yearly": "سنوي",
+    "yearlyBilling": "الدفع السنوي"
+  },
+  "AddOns": {
+    "title": "اختر الإضافات",
+    "description": "تساعد الإضافات على تحسين تجربة اللعب لديك.",
+    "legend": "الإضافات",
+    "items": {
+      "online-service": {
+        "name": "الخدمة عبر الإنترنت",
+        "description": "الوصول إلى الألعاب الجماعية"
+      },
+      "larger-storage": {
+        "name": "مساحة تخزين أكبر",
+        "description": "1 تيرابايت إضافي للحفظ السحابي"
+      },
+      "customizable-profile": {
+        "name": "ملف شخصي قابل للتخصيص",
+        "description": "سمة مخصّصة لملفك الشخصي"
+      }
+    }
+  },
+  "Price": {
+    "monthly": "{price}/شهريًا",
+    "yearly": "{price}/سنويًا"
+  },
+  "Summary": {
+    "title": "اللمسات الأخيرة",
+    "description": "تحقّق من أن كل شيء صحيح قبل التأكيد.",
+    "planWithBilling": "{plan} ({billing})",
+    "change": "تغيير",
+    "changePlan": "تغيير الخطة",
+    "discount": "رمز الخصم {code}",
+    "total": {
+      "monthly": "الإجمالي (شهريًا)",
+      "yearly": "الإجمالي (سنويًا)"
+    }
+  },
+  "Promo": {
+    "label": "رمز الخصم",
+    "placeholder": "مثال: SAVE10",
+    "apply": "تطبيق",
+    "remove": "إزالة",
+    "applied": "تم تطبيق {code} — خصم {percent}"
+  },
+  "StartDate": {
+    "label": "تاريخ بدء الاشتراك"
+  },
+  "Navigation": {
+    "back": "رجوع",
+    "next": "الخطوة التالية",
+    "confirm": "تأكيد"
+  },
+  "ThankYou": {
+    "title": "شكرًا لك!",
+    "text": "شكرًا لتأكيد اشتراكك! نتمنى أن تستمتع باستخدام منصتنا. إذا احتجت إلى أي دعم، لا تتردد في مراسلتنا على <link>support@loremgaming.com</link>."
+  },
+  "Errors": {
+    "required": "هذا الحقل مطلوب",
+    "nameTooShort": "الاسم قصير جدًا",
+    "invalidEmail": "أدخل بريدًا إلكترونيًا صالحًا",
+    "invalidPhone": "أدخل رقم هاتف صالحًا",
+    "planRequired": "يرجى اختيار خطة",
+    "invalidFileType": "استخدم صورة بصيغة PNG أو JPG أو WebP",
+    "fileTooLarge": "يجب ألا يتجاوز حجم الصورة {size} ميغابايت",
+    "dateInPast": "لا يمكن أن يكون تاريخ البدء في الماضي",
+    "invalidPromo": "رمز الخصم هذا غير صالح"
+  }
+}

@@ -10,12 +10,12 @@ $mobile-card-max-width: 540px;
 
   @include mq(md) {
     display: grid;
-    grid-template-columns: clamp(rem(220px), 30%, rem(274px)) 1fr;
-    width: min(100%, $card-max-width);
+    grid-template-columns: clamp(rem(220px), 30%, rem(274px)) minmax(0, 1fr);
+    width: 100%;
     min-height: rem(600px);
     padding: rem(16px);
     border-radius: $radius-xl;
-    background-color: var(--color-white);
+    background-color: var(--color-surface);
     box-shadow: var(--shadow-card);
   }
 }
@@ -44,7 +44,7 @@ $mobile-card-max-width: 540px;
   margin: rem(-$mobile-card-overlap) auto 0;
   padding: rem(32px) rem(24px);
   border-radius: $radius-lg;
-  background-color: var(--color-white);
+  background-color: var(--color-surface);
   box-shadow: var(--shadow-card);
 
   @include mq(md) {

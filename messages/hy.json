@@ -1,0 +1,117 @@
+{
+  "Metadata": {
+    "title": "Բազմաքայլ ձև",
+    "description": "Ընտրեք խաղային բաժանորդագրության փաթեթ և հավելումներ մի քանի պարզ քայլով։"
+  },
+  "Toolbar": {
+    "language": "Լեզու",
+    "toggleTheme": "Փոխել մուգ ռեժիմը"
+  },
+  "Steps": {
+    "progress": "Ձևի ընթացքը",
+    "step": "Քայլ {number}",
+    "info": "Ձեր տվյալները",
+    "plan": "Փաթեթ",
+    "addOns": "Հավելումներ",
+    "summary": "Ամփոփում"
+  },
+  "PersonalInfo": {
+    "title": "Անձնական տվյալներ",
+    "description": "Խնդրում ենք նշել ձեր անունը, էլ. հասցեն և հեռախոսահամարը։",
+    "name": "Անուն",
+    "namePlaceholder": "օր.՝ Ստեֆեն Քինգ",
+    "email": "Էլ. հասցե",
+    "emailPlaceholder": "օր.՝ stephenking@lorem.com",
+    "phone": "Հեռախոսահամար",
+    "phonePlaceholder": "օր.՝ +374 12 345 678"
+  },
+  "Avatar": {
+    "label": "Պրոֆիլի նկար",
+    "optional": "Ըստ ցանկության",
+    "prompt": "Քաշեք և գցեք նկարն այստեղ կամ սեղմեք՝ ընտրելու համար",
+    "hint": "PNG, JPG կամ WebP, մինչև {size} ՄԲ",
+    "remove": "Հեռացնել նկարը",
+    "preview": "Ձեր պրոֆիլի նկարը"
+  },
+  "Plan": {
+    "title": "Ընտրեք ձեր փաթեթը",
+    "description": "Կարող եք ընտրել ամսական կամ տարեկան վճարում։",
+    "legend": "Փաթեթ",
+    "freeMonths": "{count} ամիս անվճար",
+    "names": {
+      "arcade": "Արկադ",
+      "advanced": "Ընդլայնված",
+      "pro": "Պրո"
+    }
+  },
+  "Billing": {
+    "monthly": "Ամսական",
+    "yearly": "Տարեկան",
+    "yearlyBilling": "Տարեկան վճարում"
+  },
+  "AddOns": {
+    "title": "Ընտրեք հավելումներ",
+    "description": "Հավելումները բարելավում են ձեր խաղային փորձառությունը։",
+    "legend": "Հավելումներ",
+    "items": {
+      "online-service": {
+        "name": "Առցանց ծառայություն",
+        "description": "Մուտք բազմախաղացողային խաղեր"
+      },
+      "larger-storage": {
+        "name": "Ավելի մեծ պահոց",
+        "description": "Լրացուցիչ 1ՏԲ ամպային պահպանում"
+      },
+      "customizable-profile": {
+        "name": "Անհատականացվող պրոֆիլ",
+        "description": "Անհատական թեմա ձեր պրոֆիլում"
+      }
+    }
+  },
+  "Price": {
+    "monthly": "{price}/ամս",
+    "yearly": "{price}/տարի"
+  },
+  "Summary": {
+    "title": "Վերջնական քայլ",
+    "description": "Ստուգեք, որ ամեն ինչ ճիշտ է, նախքան հաստատելը։",
+    "planWithBilling": "{plan} ({billing})",
+    "change": "Փոխել",
+    "changePlan": "Փոխել փաթեթը",
+    "discount": "Պրոմո կոդ {code}",
+    "total": {
+      "monthly": "Ընդամենը (ամսական)",
+      "yearly": "Ընդամենը (տարեկան)"
+    }
+  },
+  "Promo": {
+    "label": "Պրոմո կոդ",
+    "placeholder": "օր.՝ SAVE10",
+    "apply": "Կիրառել",
+    "remove": "Հեռացնել",
+    "applied": "{code} կոդը կիրառված է — {percent} զեղչ"
+  },
+  "StartDate": {
+    "label": "Բաժանորդագրության մեկնարկի ամսաթիվ"
+  },
+  "Navigation": {
+    "back": "Հետ",
+    "next": "Հաջորդ քայլ",
+    "confirm": "Հաստատել"
+  },
+  "ThankYou": {
+    "title": "Շնորհակալություն",
+    "text": "Շնորհակալություն բաժանորդագրությունը հաստատելու համար։ Հուսով ենք՝ կվայելեք մեր հարթակը։ Աջակցության կարիք ունենալու դեպքում գրեք մեզ <link>support@loremgaming.com</link> հասցեով։"
+  },
+  "Errors": {
+    "required": "Այս դաշտը պարտադիր է",
+    "nameTooShort": "Անունը չափազանց կարճ է",
+    "invalidEmail": "Մուտքագրեք վավեր էլ. հասցե",
+    "invalidPhone": "Մուտքագրեք վավեր հեռախոսահամար",
+    "planRequired": "Խնդրում ենք ընտրել փաթեթ",
+    "invalidFileType": "Օգտագործեք PNG, JPG կամ WebP նկար",
+    "fileTooLarge": "Նկարը պետք է լինի առավելագույնը {size} ՄԲ",
+    "dateInPast": "Մեկնարկի ամսաթիվը չի կարող անցյալում լինել",
+    "invalidPromo": "Այս պրոմո կոդը վավեր չէ"
+  }
+}

@@ -1,0 +1,123 @@
+@use "../../styles/abstracts" as *;
+
+.field {
+  display: grid;
+  gap: rem(8px);
+}
+
+.labelRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  column-gap: rem(16px);
+}
+
+.label {
+  font-size: rem(12px);
+
+  @include mq(md) {
+    font-size: rem(14px);
+  }
+}
+
+.error {
+  font-size: rem(12px);
+  font-weight: 700;
+  color: var(--color-error);
+
+  @include mq(md) {
+    font-size: rem(14px);
+  }
+}
+
+.controls {
+  display: flex;
+  gap: rem(8px);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  height: rem(40px);
+  padding-inline: rem(16px);
+  border: 1px solid var(--color-border);
+  border-radius: $radius-md;
+  background-color: var(--color-surface);
+  font-size: rem(15px);
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--color-text);
+  transition: border-color $transition-fast;
+
+  &::placeholder {
+    text-transform: none;
+    color: var(--color-text-muted);
+  }
+
+  @include hover {
+    border-color: var(--color-accent);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-accent);
+  }
+
+  &:focus-visible {
+    @include focus-ring(1px);
+  }
+
+  @include mq(md) {
+    height: rem(44px);
+    font-size: rem(16px);
+  }
+}
+
+.invalid {
+  border-color: var(--color-error);
+}
+
+.apply {
+  padding-inline: rem(16px);
+  border: 1px solid var(--color-accent);
+  border-radius: $radius-md;
+  font-size: rem(14px);
+  font-weight: 500;
+  color: var(--color-accent);
+  transition:
+    background-color $transition-fast,
+    color $transition-fast;
+
+  @include hover {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+  }
+}
+
+.applied {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: rem(8px) rem(16px);
+  padding: rem(12px) rem(16px);
+  border: 1px solid var(--color-accent);
+  border-radius: $radius-md;
+  background-color: var(--color-surface-muted);
+  font-size: rem(14px);
+  font-weight: 500;
+  color: var(--color-accent);
+}
+
+.remove {
+  font-size: rem(14px);
+  color: var(--color-text-muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color $transition-fast;
+
+  @include hover {
+    color: var(--color-error);
+  }
+}

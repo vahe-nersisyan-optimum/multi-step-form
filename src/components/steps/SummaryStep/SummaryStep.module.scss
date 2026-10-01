@@ -3,7 +3,7 @@
 .summary {
   padding: rem(16px);
   border-radius: $radius-md;
-  background-color: var(--color-blue-50);
+  background-color: var(--color-surface-muted);
 
   @include mq(md) {
     padding: rem(16px) rem(24px) rem(24px);
@@ -28,13 +28,13 @@
 
 .change {
   font-size: rem(14px);
-  color: var(--color-grey-600);
+  color: var(--color-text-muted);
   text-decoration: underline;
   text-underline-offset: 2px;
   transition: color $transition-fast;
 
   @include hover {
-    color: var(--color-purple-600);
+    color: var(--color-accent);
   }
 }
 
@@ -52,7 +52,7 @@
   gap: rem(12px);
   margin-top: rem(12px);
   padding-top: rem(16px);
-  border-top: 1px solid var(--color-purple-200);
+  border-top: 1px solid var(--color-border);
 
   @include mq(md) {
     gap: rem(16px);
@@ -69,7 +69,16 @@
 }
 
 .addOnName {
-  color: var(--color-grey-600);
+  color: var(--color-text-muted);
+}
+
+.discount {
+  display: flex;
+  justify-content: space-between;
+  gap: rem(16px);
+  font-size: rem(14px);
+  font-weight: 500;
+  color: var(--color-accent);
 }
 
 .total {
@@ -86,15 +95,23 @@
 
 .totalLabel {
   font-size: rem(14px);
-  color: var(--color-grey-600);
+  color: var(--color-text-muted);
 }
 
 .totalPrice {
   font-size: rem(16px);
   font-weight: 700;
-  color: var(--color-purple-600);
+  color: var(--color-accent);
 
   @include mq(md) {
     font-size: rem(20px);
   }
+}
+
+.extras {
+  display: grid;
+  gap: rem(16px);
+  margin-top: rem(24px);
+  padding-top: rem(24px);
+  border-top: 1px solid var(--color-border);
 }

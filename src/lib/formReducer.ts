@@ -1,34 +1,59 @@
 import { LAST_STEP } from "./constants";
-import type { AddOnId, FormState, PersonalInfoField, PlanId } from "./types";
-import { hasErrors, validatePersonalInfoField, validateStep } from "./validation";
+import { normalizePromoCode } from "./pricing";
+import type {
+  AddOnId,
+  Avatar,
+  ErrorCode,
+  FormState,
+  PersonalInfoField,
+  PlanId,
+} from "./types";
+import {
+  hasErrors,
+  validatePersonalInfoField,
+  validatePromoCode,
+  validateStartDate,
+  validateStep,
+} from "./validation";
 
 export enum FormActionType {
   UpdatePersonalInfo = "updatePersonalInfo",
+  UpdateAvatar = "updateAvatar",
   SelectPlan = "selectPlan",
   ToggleBilling = "toggleBilling",
   ToggleAddOn = "toggleAddOn",
+  ApplyPromoCode = "applyPromoCode",
+  RemovePromoCode = "removePromoCode",
+  UpdateStartDate = "updateStartDate",
   NextStep = "nextStep",
   PreviousStep = "previousStep",
   GoToStep = "goToStep",
   Confirm = "confirm",
+  Restore = "restore",
 }
 
 export interface FormAction {
   type: FormActionType;
   field?: PersonalInfoField;
   value?: string;
+  avatar?: Avatar | null;
+  error?: ErrorCode;
   plan?: PlanId;
   addOn?: AddOnId;
   step?: number;
+  state?: FormState;
 }
 
 export const initialFormState: FormState = {
   step: 0,
   isConfirmed: false,
   personalInfo: { name: "", email: "", phone: "" },
+  avatar: null,
   plan: null,
   billing: "monthly",
   addOns: [],
+  promoCode: null,
+  startDate: "",
   errors: {},
 };
 
@@ -49,6 +74,12 @@ export function formReducer(state: FormState, action: FormAction): FormState {
         errors,
       };
     }
+    case FormActionType.UpdateAvatar:
+      return {
+        ...state,
+        avatar: action.avatar!,
+        errors: { ...state.errors, avatar: action.error },
+      };
     case FormActionType.SelectPlan:
       return { ...state, plan: action.plan!, errors: { ...state.errors, plan: undefined } };
     case FormActionType.ToggleBilling:
@@ -60,6 +91,26 @@ export function formReducer(state: FormState, action: FormAction): FormState {
         : [...state.addOns, addOn];
 
       return { ...state, addOns };
+    }
+    case FormActionType.ApplyPromoCode: {
+      const code = action.value!;
+      const error = validatePromoCode(code);
+
+      return {
+        ...state,
+        promoCode: error ? state.promoCode : normalizePromoCode(code),
+        errors: { ...state.errors, promoCode: error },
+      };
+    }
+    case FormActionType.RemovePromoCode:
+      return { ...state, promoCode: null, errors: { ...state.errors, promoCode: undefined } };
+    case FormActionType.UpdateStartDate: {
+      const value = action.value!;
+      const errors = state.errors.startDate
+        ? { ...state.errors, startDate: validateStartDate(value) }
+        : state.errors;
+
+      return { ...state, startDate: value, errors };
     }
     case FormActionType.NextStep: {
       const errors = validateStep(state);
@@ -79,6 +130,8 @@ export function formReducer(state: FormState, action: FormAction): FormState {
     }
     case FormActionType.Confirm:
       return state.step === LAST_STEP ? { ...state, isConfirmed: true } : state;
+    case FormActionType.Restore:
+      return { ...initialFormState, ...action.state! };
     default:
       return state;
   }
