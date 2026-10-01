@@ -28,7 +28,7 @@ Open http://localhost:3000 (redirects to `/en`; also available at `/hy` and `/ar
 - Light and dark themes that follow the system setting, with a manual toggle remembered across visits
 - Optional profile picture upload with drag and drop, preview and type/size validation (PNG, JPG, WebP up to 2 MB)
 - Promo code on the summary step (`SAVE10` gives 10% off) and a required subscription start date
-- Form progress is kept in `sessionStorage`, so switching language or refreshing does not lose answers
+- Form progress is kept in memory across language switches and starts fresh on page reload
 - Navigate back to any previous step, or jump to plan selection from the summary
 - Monthly / yearly billing with live price updates
 - Validation: required fields, email and phone format, required plan selection
@@ -48,7 +48,7 @@ src/
 │   └── ...               # Reusable UI: TextField, BillingToggle, StepIndicator, ...
 ├── hooks/                # Locale-aware price formatting
 ├── i18n/                 # next-intl routing, navigation and request config
-├── lib/                  # Pure logic: types, data, pricing, validation, reducer, storage
+├── lib/                  # Pure logic: types, data, pricing, validation, reducer, state cache
 ├── proxy.ts              # Locale detection and redirects
 └── styles/
     ├── abstracts/        # Variables, functions, mixins (no CSS output)

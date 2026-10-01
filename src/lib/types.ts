@@ -41,6 +41,7 @@ export interface AddOn {
 
 export interface FormState {
   step: number;
+  isRestored: boolean;
   isConfirmed: boolean;
   personalInfo: PersonalInfo;
   avatar: Avatar | null;

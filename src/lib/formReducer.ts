@@ -46,6 +46,7 @@ export interface FormAction {
 
 export const initialFormState: FormState = {
   step: 0,
+  isRestored: false,
   isConfirmed: false,
   personalInfo: { name: "", email: "", phone: "" },
   avatar: null,
@@ -131,7 +132,7 @@ export function formReducer(state: FormState, action: FormAction): FormState {
     case FormActionType.Confirm:
       return state.step === LAST_STEP ? { ...state, isConfirmed: true } : state;
     case FormActionType.Restore:
-      return { ...initialFormState, ...action.state! };
+      return { ...state, ...action.state, isRestored: true };
     default:
       return state;
   }

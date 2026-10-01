@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useLayoutEffect, useMemo, useReducer } from "react";
 import { LAST_STEP } from "@/lib/constants";
 import { FormActionType, formReducer, initialFormState } from "@/lib/formReducer";
-import { loadFormState, saveFormState } from "@/lib/storage";
+import { loadFormState, saveFormState } from "@/lib/formStateCache";
 import type { AddOnId, Avatar, ErrorCode, FormErrors, PersonalInfoField, PlanId } from "@/lib/types";
 import { hasErrors, validateStep } from "@/lib/validation";
 
@@ -11,15 +11,13 @@ export function useSubscriptionForm() {
   const [state, dispatch] = useReducer(formReducer, initialFormState);
 
   useLayoutEffect(() => {
-    const saved = loadFormState();
-
-    if (saved) {
-      dispatch({ type: FormActionType.Restore, state: saved });
-    }
+    dispatch({ type: FormActionType.Restore, state: loadFormState() ?? undefined });
   }, []);
 
   useEffect(() => {
-    saveFormState(state);
+    if (state.isRestored) {
+      saveFormState(state);
+    }
   }, [state]);
 
   const submitStep = useCallback((): FormErrors => {
